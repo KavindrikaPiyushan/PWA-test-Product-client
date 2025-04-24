@@ -14,7 +14,7 @@ async function initDB() {
   });
 }
 
-await initDB();
+
 
 export async function saveSub(data) {
   try {
@@ -49,3 +49,8 @@ export async function clearSub() {
     console.error('🔒 Error clearing subscription:', err);
   }
 }
+
+
+(async () => {
+  await initDB();
+})();
