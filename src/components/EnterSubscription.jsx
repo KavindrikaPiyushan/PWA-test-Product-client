@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { activateLicense } from '../utils/activate'; // Import the activation function
 import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { Link } from 'react-router-dom'; // Import Link for navigation
 
 export default function EnterSubscription() {
   const [licenseKey, setLicenseKey] = useState('');
@@ -65,6 +66,8 @@ export default function EnterSubscription() {
           {loading ? 'Validating...' : 'Activate Subscription'}
         </button>
       </form>
+
+      <Link to='/' style={{paddingTop:'20px'}}>Back</Link>
     </div>
   );
 }
